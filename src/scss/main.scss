@@ -1,0 +1,21 @@
+// 例えば角丸設定を上書きする
+$enable-rounded: false;
+
+// テーマカラー設定
+$theme-colors: (
+  'primary': #c51162,
+  'secondary': #222222,
+);
+
+// ヒーロースペースの背景色
+$jumbotron-bg: #d9f5ff;
+
+// レスポンシブフォントサイズを有効にする
+$enable-responsive-font-sizes: true;
+
+// フォントを変える
+$font-family-base: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+  'Hiragino Sans', Meiryo, sans-serif;
+
+/* Bootstrap を読み込む */
+@import '~bootstrap/scss/bootstrap.scss';
