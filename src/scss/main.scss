@@ -3,8 +3,31 @@ $enable-rounded: false;
 
 // テーマカラー設定
 $theme-colors: (
-  'primary': #c51162,
-  'secondary': #222222,
+  'primary': #354e59,
+  'primary-light': #738e99,
+  'secondary': #6e5e46,
+  'secondary-light': #ad9f8a,
+  'grey': #e6dcd8,
+  'link': #017cfe,
+);
+
+// カスタムマージン&パディング
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    // prettier-ignore
+    0: 0,
+    1: ($spacer * 0.25),
+    2: ($spacer * 0.5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 5),
+    7: ($spacer * 7),
+    8: ($spacer * 10)
+  ),
+  $spacers
 );
 
 // ヒーロースペースの背景色
@@ -19,3 +42,66 @@ $font-family-base: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
 
 /* Bootstrap を読み込む */
 @import '~bootstrap/scss/bootstrap.scss';
+
+.carousel-image {
+  height: 70vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.about__box {
+  &--1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+      url('../images/shake-hands.jpg');
+    background-size: cover;
+    background-repeat: none;
+  }
+
+  &--2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+      url('../images/blog.jpg');
+    background-size: cover;
+    background-repeat: none;
+  }
+
+  &--3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+      url('../images/company.jpg');
+    background-size: cover;
+    background-repeat: none;
+  }
+}
+
+.info {
+  &__image {
+    width: 200px;
+    height: 200px;
+  }
+
+  &__detail--title {
+    width: 200px;
+  }
+}
+
+.business {
+  &__image {
+    // width: 400px;
+    // height: 250px;
+  }
+}
+
+.office {
+  &__image {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.benefit {
+  &__image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+}

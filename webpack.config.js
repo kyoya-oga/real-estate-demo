@@ -16,7 +16,7 @@ module.exports = {
   // development に設定するとソースマップ有効でJSファイルが出力される
   mode: 'development',
   devServer: {
-    contentBase: path.join(__dirname, 'dist/html'),
+    contentBase: path.join(__dirname, 'src'),
     // contentBase: 'dist',
     open: true,
 
